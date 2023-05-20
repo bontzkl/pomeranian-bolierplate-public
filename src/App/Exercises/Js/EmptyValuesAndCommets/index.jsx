@@ -1,10 +1,11 @@
 import './styles.css';
+import { useState, useEffect } from 'react';
 
 const numbers = [2, 5, 7, 1, 8, 12];
 const arr = ['źrebak', 'łąka', 'zegarek', 'auto', 'kanapa', 'placek'];
 
 const myText = 'ala_ma_kota_a_tomek_ma_psa';
-
+//funkcja formatująca myText
 const formatter = (text) => {
   text = text.replace('a', 'A');
   text = text.split('_');
@@ -18,17 +19,14 @@ const formatter = (text) => {
   }
   console.log(textAfterFormat);
 };
-formatter(myText);
 
-const pxY = '1080px';
-const pxX = '1920px';
 const CalculatePixels = (x, y) => {
   x = parseInt(x);
   y = parseInt(y);
   const totalPx = x * y;
   return String(totalPx) + 'px';
 };
-
+//funckja sprawdzająca wartości zmiennych
 const getInfoAboutValue = (value) => {
   console.log(
     'Typ wartości:',
@@ -39,19 +37,23 @@ const getInfoAboutValue = (value) => {
     Boolean(value)
   );
 };
-getInfoAboutValue(undefined);
-getInfoAboutValue(null);
-getInfoAboutValue('abc');
-getInfoAboutValue(123);
-
-const checker = (e) => {
-  const text = e.replaceAll('kurde', 'psia jucha');
-};
 
 export function ValuesAndComments() {
+  const [text, setText] = useState('');
+  const [censured, setCensured] = useState(false);
+  const handleOnChange = (e) => {
+    const uncensuredtext = e.target.value;
+    const censure = e.target.value.replaceAll('kurde', 'psia jucha');
+    setText(censure);
+    if (censure != uncensuredtext) {
+      setCensured(true);
+    } else {
+      setCensured(false);
+    }
+  };
   return (
     <div>
-      {arr
+      {/* {arr
         .sort((a, b) => {
           return a.localeCompare(b);
         })
@@ -63,10 +65,10 @@ export function ValuesAndComments() {
         .reverse()
         .map((item) => {
           return <p>{item}</p>;
-        })}
-      <p>1920px X 1080px</p>
-      {CalculatePixels(pxX, pxY)}
-      <input onChange={checker} />
+        })} */}
+      <input onChange={handleOnChange} />
+      {censured && <p className="alert">Tekst został ocenzurowany!</p>}
+      <p>{text}</p>
     </div>
   );
 }
