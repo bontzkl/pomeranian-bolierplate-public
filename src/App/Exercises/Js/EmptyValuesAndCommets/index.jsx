@@ -1,5 +1,5 @@
 import './styles.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const numbers = [2, 5, 7, 1, 8, 12];
 const arr = ['źrebak', 'łąka', 'zegarek', 'auto', 'kanapa', 'placek'];
@@ -43,7 +43,7 @@ export function ValuesAndComments() {
   const [censured, setCensured] = useState(false);
   const handleOnChange = (e) => {
     const uncensuredtext = e.target.value;
-    const censure = e.target.value.replaceAll('kurde', 'psia jucha');
+    const censure = e.target.value.replaceAll('kurde', 'psiajucha');
     setText(censure);
     if (censure != uncensuredtext) {
       setCensured(true);
