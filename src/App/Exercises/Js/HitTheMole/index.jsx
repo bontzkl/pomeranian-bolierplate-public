@@ -1,5 +1,5 @@
-import { Button } from './ComponentsHitTheMoleGame/Button/Button';
-import { Selector } from './ComponentsHitTheMoleGame/Selector/Selector';
+import { Button } from './Button/Button';
+import { Selector } from './Selector/Selector';
 
 import './styles.css';
 

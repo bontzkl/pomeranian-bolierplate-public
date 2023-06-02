@@ -1,6 +1,6 @@
 import { Button } from '../Button/Button';
-import { useState } from 'react';
-export const Selector = ({ options }) => {
+import { useState, useEffect } from 'react';
+export const Selector = ({ options, setBoardSize }) => {
   const [modifiedOptions, setModifiedOptions] = useState(options);
 
   const handleClick = (clickedButton) => {
@@ -13,6 +13,15 @@ export const Selector = ({ options }) => {
       })
     );
   };
+  useEffect(() => {
+    if (modifiedOptions) {
+      modifiedOptions.find((item) => {
+        if (item.isActive === true) {
+          setBoardSize(item.value);
+        }
+      });
+    }
+  }, [modifiedOptions]);
   return (
     <div>
       {modifiedOptions.map(({ label, value, isActive }) => (
