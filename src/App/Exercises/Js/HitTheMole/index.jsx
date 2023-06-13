@@ -1,5 +1,5 @@
-import { Button } from './ComponentsHitTheMoleGame/Button/Button';
-import { Selector } from './ComponentsHitTheMoleGame/Selector/Selector';
+import { Button } from './Button/Button';
+import { Selector } from './Selector/Selector';
 
 import './styles.css';
 
@@ -10,9 +10,9 @@ export function HitTheMoleGame() {
         <div className="label">CZAS GRY</div>
         <Selector
           options={[
-            { label: '1 minuta', value: 1 },
-            { label: '2 minuty', value: 2 },
-            { label: '3 minuty', value: 3 },
+            { label: '1 minuta', value: 1, isActive: false },
+            { label: '2 minuty', value: 2, isActive: true },
+            { label: '3 minuty', value: 3, isActive: false },
           ]}
         />
       </div>
@@ -20,9 +20,9 @@ export function HitTheMoleGame() {
         <div className="label">LICZBA KRETÓW</div>
         <Selector
           options={[
-            { label: '1 kret', value: 1 },
-            { label: '2 krety', value: 2 },
-            { label: '3 krety', value: 3 },
+            { label: '1 kret', value: 1, isActive: true },
+            { label: '2 krety', value: 2, isActive: false },
+            { label: '3 krety', value: 3, isActive: false },
           ]}
         />
       </div>
