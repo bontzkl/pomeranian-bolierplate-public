@@ -12,9 +12,8 @@ export function MemoGame() {
   const [gameInterval, setGameInterval] = useState();
   const [endGame, setEndGame] = useState(false);
   const [gameStats, setGameStats] = useState();
-  const [ranking, setRanking] = useState([]);
   const [showRanking, setShowRanking] = useState(false);
-
+  let ranking = [];
   useEffect(() => {
     if (isGameStarted) {
       const timer = setInterval(() => {
@@ -37,16 +36,16 @@ export function MemoGame() {
       {endGame && (
         <h1>{`Wygrałeś! Czas: ${gameStats.time} Ruchy: ${gameStats.score} Wielkość planszy: ${gameStats.diff}`}</h1>
       )}
-      {showRanking ? (
+      {/* {showRanking ? (
         <div>
           Ranking:
           {ranking.map(({ score }) => {
-            return <li>{score}</li>;
+            return <div>{score}</div>;
           })}
         </div>
       ) : (
         ''
-      )}
+      )} */}
       {!isGameStarted && (
         <MenuView
           setIsGameStarted={setIsGameStarted}
@@ -78,9 +77,7 @@ export function MemoGame() {
           setGameStats={setGameStats}
           setBoardSize={setBoardSize}
           gameStats={gameStats}
-          setRanking={setRanking}
           ranking={ranking}
-          endGame={endGame}
         />
       )}
     </div>

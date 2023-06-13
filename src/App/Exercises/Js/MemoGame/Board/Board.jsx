@@ -46,14 +46,18 @@ export const Board = ({
   timeScore,
   setBoardSize,
   gameStats,
-  setRanking,
   ranking,
-  endGame,
 }) => {
   const [board, setBoard] = useState(generateBoard(boardSize));
   const [firstClickedId, setFirstClickedId] = useState();
   const [secondClickedId, setSecondClickedId] = useState();
   const FIELD_CLICK_RESET_DELAY = 800;
+
+  // const setRanking = (ranking) => {
+  //   ranking.map((objects) => {
+  //     return [...objects, gameStats];
+  //   });
+  // };
 
   const resetClickedFieldId = () => {
     setTimeout(() => {
@@ -99,7 +103,7 @@ export const Board = ({
       setEndGame(false);
     } else {
       setGameStats({ time: timeScore, score: stepAmount, diff: boardSize });
-      setRanking((oldRanking) => [...oldRanking, gameStats]);
+      // setRanking();
       setEndGame(true);
       setIsGameStarted(false);
       setBoardSize(0);
