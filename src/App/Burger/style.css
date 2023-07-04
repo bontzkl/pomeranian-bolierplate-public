@@ -1,19 +1,11 @@
 .hamburger {
-  top: 100px;
-  left: 20px;
-  position: absolute;
   width: 2rem;
   height: 2rem;
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
   z-index: 10;
-  transition: 0.3s linear;
   cursor: pointer;
-}
-
-.open {
-  transform: translate(500%);
 }
 
 .burger {
@@ -22,7 +14,7 @@
   border-radius: 10px;
   background-color: black;
   transform-origin: 1px;
-  transition: all 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .burger1 {
@@ -34,12 +26,10 @@
 }
 
 .burger2 {
-  transform: translateX(0);
   opacity: 1;
 }
 
 .burger22 {
-  transform: translateX(100%);
   opacity: 0;
 }
 

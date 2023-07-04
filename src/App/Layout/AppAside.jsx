@@ -8,15 +8,10 @@ import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { FAQIcon } from '../Components/Icons/FAQIcon';
-import { Hamburger } from '../Burger';
-import { useState } from 'react';
+
 export function AppAside({ hamburgerOpen, setHamburgerOpen }) {
-  const toggleHamburger = () => {
-    setHamburgerOpen(!hamburgerOpen);
-  };
   return (
     <div>
-      <Hamburger onClick={toggleHamburger} isOpen={hamburgerOpen} />
       <aside className={hamburgerOpen ? '' : 'closed'}>
         <nav>
           <ul>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Hamburger } from '../Burger';
 import { AppHeader } from './AppHeader';
 import { AppFooter } from './AppFooter';
 import { ErrorBoundary } from './ErrorBoundary';
@@ -14,7 +13,10 @@ export const Layout = () => {
   return (
     <ErrorBoundary>
       <div className={hamburgerOpen ? 'layout with-sidebar' : 'layout'}>
-        <AppHeader />
+        <AppHeader
+          hamburgerOpen={hamburgerOpen}
+          setHamburgerOpen={setHamburgerOpen}
+        />
         <AppAside
           hamburgerOpen={hamburgerOpen}
           setHamburgerOpen={setHamburgerOpen}
