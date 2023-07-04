@@ -6,5 +6,5 @@ export const blockRouterMetaData = {
   linkLabel: 'Async & Await',
   blockNo: 35,
   element: <Promises />,
-  tags:  ['async', 'await', 'asynchronous', 'javascript'],
+  tags: ['async', 'await', 'asynchronous', 'javascript'],
 };

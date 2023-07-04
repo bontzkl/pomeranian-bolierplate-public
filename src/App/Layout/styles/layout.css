@@ -3,11 +3,11 @@
   width: 100vw;
   height: 100vh;
 
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 15% 1fr;
   grid-template-rows: 5rem 4fr 5rem;
   grid-template-areas:
     'header header'
-    'sidebar main'
+    'aside main'
     'footer footer';
 
   background: var(--color-white);
@@ -22,4 +22,11 @@ main {
   flex-direction: column;
   flex: 1;
   padding: 1.5rem;
+}
+
+.with-sidebar {
+  grid-template-areas:
+    'header header'
+    'aside main'
+    'footer footer';
 }

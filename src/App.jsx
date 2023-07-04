@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 
 import { NotFound } from './App/Components/NotFound/NotFound';
@@ -13,10 +13,17 @@ import { Settings } from './App/Settings/Settings';
 import { FAQ } from './App/FAQ/FAQ';
 
 export function App() {
+  const [withSidebar, setWithSidebar] = useState(0);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="" element={<Layout withSidebar />}>
+        <Route
+          path=""
+          element={
+            <Layout withSidebar={withSidebar} setWithSidebar={setWithSidebar} />
+          }
+        >
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard/*" element={<Dashboard />} />
           <Route path="exercises/*" element={<Exercises />} />

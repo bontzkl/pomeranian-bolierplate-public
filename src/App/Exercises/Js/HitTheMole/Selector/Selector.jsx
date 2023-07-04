@@ -1,5 +1,5 @@
-import { Button } from '../Button/Button';
 import { useState, useEffect } from 'react';
+import { Button } from '../Button/Button';
 export const Selector = ({ options, setBoardSize }) => {
   const [modifiedOptions, setModifiedOptions] = useState(options);
 
