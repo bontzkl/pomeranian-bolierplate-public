@@ -1,42 +1,39 @@
 import './styles.css';
 import { useState } from 'react';
 
-const numbers = [2, 5, 7, 1, 8, 12];
-const arr = ['źrebak', 'łąka', 'zegarek', 'auto', 'kanapa', 'placek'];
-
-const myText = 'ala_ma_kota_a_tomek_ma_psa';
+// const myText = 'ala_ma_kota_a_tomek_ma_psa';
 //funkcja formatująca myText
-const formatter = (text) => {
-  text = text.replace('a', 'A');
-  text = text.split('_');
-  let textAfterFormat = '';
-  for (let i = 0; i < text.length; i++) {
-    if (i === text.length - 1) {
-      textAfterFormat = textAfterFormat + text[i] + '.';
-    } else {
-      textAfterFormat = textAfterFormat + text[i] + ' ';
-    }
-  }
-  console.log(textAfterFormat);
-};
+// const formatter = (text) => {
+//   text = text.replace('a', 'A');
+//   text = text.split('_');
+//   let textAfterFormat = '';
+//   for (let i = 0; i < text.length; i++) {
+//     if (i === text.length - 1) {
+//       textAfterFormat = textAfterFormat + text[i] + '.';
+//     } else {
+//       textAfterFormat = textAfterFormat + text[i] + ' ';
+//     }
+//   }
+//   console.log(textAfterFormat);
+// };
 
-const CalculatePixels = (x, y) => {
-  x = parseInt(x);
-  y = parseInt(y);
-  const totalPx = x * y;
-  return String(totalPx) + 'px';
-};
+// const CalculatePixels = (x, y) => {
+//   x = parseInt(x);
+//   y = parseInt(y);
+//   const totalPx = x * y;
+//   return String(totalPx) + 'px';
+// };
 //funckja sprawdzająca wartości zmiennych
-const getInfoAboutValue = (value) => {
-  console.log(
-    'Typ wartości:',
-    typeof value,
-    '\nWartość:',
-    value,
-    '\nWartość logiczna:',
-    Boolean(value)
-  );
-};
+// const getInfoAboutValue = (value) => {
+//   console.log(
+//     'Typ wartości:',
+//     typeof value,
+//     '\nWartość:',
+//     value,
+//     '\nWartość logiczna:',
+//     Boolean(value)
+//   );
+// };
 
 export function ValuesAndComments() {
   const [text, setText] = useState('');
@@ -45,7 +42,7 @@ export function ValuesAndComments() {
     const uncensuredtext = e.target.value;
     const censure = e.target.value.replaceAll('kurde', 'psiajucha');
     setText(censure);
-    if (censure != uncensuredtext) {
+    if (censure !== uncensuredtext) {
       setCensured(true);
     } else {
       setCensured(false);

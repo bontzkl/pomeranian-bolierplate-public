@@ -7,6 +7,7 @@ import { SubRouteExercise4Data } from './SubRouteExercise4/router-data';
 import { SubRouteExercise5Data } from './SubRouteExercise5/router-data';
 import { blockRouterMetaData as blockRouterMetaData160520232 } from './MaterialUIBasicElements/router-data';
 import { SubRouteMUITemplateDashboard } from './MUITemplateDashboard/router-data';
+import { WelcomViewRouterMetaData } from './WelcomeView/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExercise1Data,
@@ -16,5 +17,6 @@ export const blockRouterMetaData = [
   SubRouteExercise5Data,
   blockRouterMetaData160520232,
   SubRouteMUITemplateDashboard,
+  WelcomViewRouterMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
