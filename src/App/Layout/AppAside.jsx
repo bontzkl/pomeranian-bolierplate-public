@@ -8,8 +8,10 @@ import { CalendarIcon } from '../Components/Icons/CalendarIcon';
 import { SettingIcon } from '../Components/Icons/SettingIcon';
 import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
 import { FAQIcon } from '../Components/Icons/FAQIcon';
+import { GameIcon2 } from '../Components/Icons/GameIcon2';
+import { GameIcon1 } from '../Components/Icons/GameIcon1';
 
-export function AppAside({ hamburgerOpen, setHamburgerOpen }) {
+export function AppAside({ hamburgerOpen }) {
   return (
     <div>
       <aside className={hamburgerOpen ? '' : 'closed'}>
@@ -46,6 +48,18 @@ export function AppAside({ hamburgerOpen, setHamburgerOpen }) {
               <NavLink className="aside-row" to="faq">
                 <FAQIcon className="menu-icon" />
                 FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="aside-row" to="hit-the-mole">
+                <GameIcon2 className="menu-icon" />
+                Uderz kreta
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="aside-row" to="memo-game">
+                <GameIcon1 className="menu-icon" />
+                Gra Memo
               </NavLink>
             </li>
             <hr></hr>
