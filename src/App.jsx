@@ -11,6 +11,8 @@ import { MyCV } from './App/CV/MyCV';
 import { MyCalendar } from './App/Calendar/Calendar';
 import { Settings } from './App/Settings/Settings';
 import { FAQ } from './App/FAQ/FAQ';
+import { MemoGame } from './App/MemoGame/MemoGame';
+import { HitTheMoleGame } from './App/HitTheMoleGame/index';
 
 export function App() {
   const [withSidebar, setWithSidebar] = useState(0);
@@ -29,7 +31,13 @@ export function App() {
           <Route path="exercises/*" element={<Exercises />} />
           <Route path="blocks/*" element={<Blocks />} />
           <Route path="my-cv/*" element={<MyCV />} />
+<<<<<<< HEAD
           <Route path="calendar/*" element={<MyCalendar />} />
+=======
+          <Route path="calendar/*" element={<Calendar />} />
+          <Route path="memo-game/*" element={<MemoGame />} />
+          <Route path="hit-the-mole/*" element={<HitTheMoleGame />} />
+>>>>>>> dc9c26d (changes)
           <Route path="settings/*" element={<Settings />} />
           <Route path="faq/*" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
