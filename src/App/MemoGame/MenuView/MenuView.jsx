@@ -1,6 +1,6 @@
-import { Button } from '../../HitTheMole/Button/Button';
+import { Button } from '../../HitTheMoleGame/Button/Button';
 import { Menu } from '../Menu/Menu.jsx';
-import { Selector } from '../../HitTheMole/Selector/Selector.jsx';
+import { Selector } from '../../HitTheMoleGame/Selector/Selector.jsx';
 
 export const MenuView = ({
   setIsGameStarted,

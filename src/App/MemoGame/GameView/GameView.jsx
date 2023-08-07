@@ -1,4 +1,4 @@
-import { Button } from '../../HitTheMole/Button/Button';
+import { Button } from '../../HitTheMoleGame/Button/Button';
 import { Menu } from '../Menu/Menu.jsx';
 import './GameView.css';
 
