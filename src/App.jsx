@@ -30,11 +30,19 @@ export function App() {
           <Route path="dashboard/*" element={<Dashboard />} />
           <Route path="exercises/*" element={<Exercises />} />
           <Route path="blocks/*" element={<Blocks />} />
-          <Route path="my-cv/*" element={<MyCV />} 
+
+          <Route path="my-cv/*" element={<MyCV />} />
+
+          
+
+          <Route path="calendar/*" element={<MyCalendar />} />
           <Route path="memo-game/*" element={<MemoGame />} />
           <Route path="hit-the-mole/*" element={<HitTheMoleGame />} />
 
-          <Route path="calendar/*" element={<MyCalendar />} />
+          
+
+          
+
 
           <Route path="settings/*" element={<Settings />} />
           <Route path="faq/*" element={<FAQ />} />
